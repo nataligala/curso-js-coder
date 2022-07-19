@@ -1,32 +1,12 @@
-//Pedir número mediante prompt y sumarle otro número en cada repetición, realizando una salida por cada resultado
+//Calcular pagos en cuotas sobre un monto determinado.
+let montoIngresado = parseInt(prompt("Ingrese el monto a financiar"));
+let cuotasIngresadas = parseInt(prompt("Ingrese las cuotas deseadas"));
 
-// let pedirNumero = parseInt(prompt("Por favor, ingrese un numero"));
-// let resultado = 0;
+function calculoCuotas(monto, cuotas){
+    let importeCuotas = monto / cuotas;
+    return importeCuotas;
+}
 
-// for( let i = 1; i < 10; i++ ){
-//     resultado = pedirNumero + i;
-//     console.log(resultado);
-// }
+let resultado = calculoCuotas(montoIngresado, cuotasIngresadas);
 
-
-
-//Pedir un texto mediante prompt, concatenar un valor en cada repetición, realizando una salida por cada resultado, hasta que se ingrese "ESC"
-
-// let pedirTexto ='';
-
-// do {
-//     pedirTexto = prompt('Por favor, ingrese su nombre. Si desea terminar ingrese "ESC"');
-//     alert('Bienvenido ' + pedirTexto);
-// }while(pedirTexto != "ESC")
-
-
-
-// //Pedir un número por prompt, repetir la salida del mensaje "Hola" la cantidad de veces ingresada.
-
-// let pedirNumero = parseInt(prompt("Por favor, ingrese un numero"));
-
-// for(let i=1; i<= pedirNumero; i++){
-//     alert("Hola");
-// }
-
-
+alert("El importe según las cuotas seleccionadas es: " + resultado);
